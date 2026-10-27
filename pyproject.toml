@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vladirech-threshopt"
+version = "0.1.0"
+description = "在候选样本上扫描阈值，输出精确率召回率曲线与建议工作点"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "vladirech" }]
+keywords = ["cli", "analysis", "observability", "evaluation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://vladirech.github.io"
+Repository = "https://github.com/vladirech/threshopt"
+Issues = "https://github.com/vladirech/threshopt/issues"
+
+[project.scripts]
+threshopt = "threshopt:main"
+
+[tool.setuptools]
+py-modules = ["threshopt"]
